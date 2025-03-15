@@ -1,6 +1,4 @@
-import { ConnectWallet } from "@thirdweb-dev/react";
-import styles from "../styles/Home.module.css";
-import { NextPage } from "next";
+import { FC } from 'react';
 import Button from '../design-system/button';
 import Twitter from '../design-system/icons/twitter';
 import Link from '../design-system/link';
@@ -12,10 +10,10 @@ import External from '../design-system/icons/external';
 import Footer from '../design-system/footer';
 import Navigation from '../design-system/navigation';
 import Wallet from '../design-system/wallet';
-import Banner from '../design-system/banner';
-import Card from '../design-system/card';
 import myImage from '../assets/pfp.png';
+import Banner from '../design-system/banner';
 import PFP from '../assets/pfp/legends.png';
+import Card from '../design-system/card';
 import GenesisPFP from '../assets/pfp/genesis.png';
 import DegenHoursPFP from '../assets/pfp/degenhours.png';
 import FrogtoberPFP from '../assets/pfp/frogtober.png';
@@ -24,11 +22,11 @@ import MutantsPFP from '../assets/pfp/mutants.png';
 import SerumPFP from '../assets/pfp/serum.png';
 import ElementalsPFP from '../assets/pfp/elementals.png';
 
-
-const Home: NextPage = () => {
-  function handleClick(): void {
-    throw new Error("Function not implemented.");
-  }
+export const Home: FC<{}> = () => {
+  
+  const handleClick = () => {
+    alert('Button clicked!');
+  };
 
   return (
     <>

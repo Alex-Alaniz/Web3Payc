@@ -4,10 +4,12 @@ import Button from './button';
 import Box from './box';
 import ChevronDown from './icons/chevron';
 import Body from './body';
+import { StaticImageData } from 'next/image';
+import Image from 'next/image';
 
 export type Props = {
   balance?: number;
-  profile?: string;
+  profile?: string | StaticImageData;
   address?: string;
 };
 
@@ -48,7 +50,7 @@ const Wallet: FC<Props> = ({ balance = '0', address = '0x00000000000000000000000
       <LocalButton 
         variant='SECONDARY'
         size='S'
-        before={profile && <img width={17} height={17} src={profile} alt="Profile" />} 
+        before={profile && <Image width={17} height={17} src={profile} alt="Profile" />} 
         after={<ChevronDown />}
         onClick={handleClick}
       >

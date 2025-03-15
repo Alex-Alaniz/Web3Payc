@@ -2,13 +2,16 @@ import { FC, ReactNode } from 'react';
 import styled from '@emotion/styled';
 import { CSSObject } from '@emotion/react';
 import Box from './box';
-import image from '../assets/banner/legends.png';
+import myImage from '../assets/banner/legends.png';
 import PFP from '../assets/pfp/placeholder.png';
 import Heading from './heading';
+import { StaticImageData } from 'next/image';
+import Image from 'next/image';
+
 
 type Props = {
   heading?: string;
-  pfp?: string;
+  pfp?: string | StaticImageData;
   children?: ReactNode;
   localStyles?: CSSObject;
 }
@@ -18,7 +21,7 @@ const El = styled(Box)(({ localStyles }: Props) => ({
   alignItems: 'center',
   justifyContent: 'center',
   padding: 'var(--scale-48)',
-  backgroundImage: `url('${image}')`,
+  backgroundImage: `url('${myImage}')`,
   backgroundPosition: 'center left',
   backgroundRepeat: 'no-repeat',
   backgroundSize: 'cover',
@@ -77,7 +80,7 @@ const ButtonGroup = styled.div({
   },
 });
 
-const Image = styled.img({
+const StyledImage = styled.img({
   borderRadius: '100%',
   width: 120,
   height: 120,

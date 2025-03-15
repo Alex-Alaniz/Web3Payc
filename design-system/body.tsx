@@ -12,8 +12,8 @@ type Props = {
 
 const El = styled.p(({ size = 'S', theme = 'LIGHT', weight = 'NORMAL', localStyles }: Props) => ({
   margin: 0,
-  '-webkit-font-smoothing': 'antialiased',
-  '-moz-osx-font-smoothing': 'grayscale',
+  'WebkitFontSmoothing': 'antialiased',
+  'MozOsxFontSmoothing': 'grayscale',
   fontFamily:  'Inter, sans-serif',
   lineHeight: 1.5,
   ...(theme === 'LIGHT' && {
